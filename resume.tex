@@ -1,9 +1,3 @@
-%-------------------------
-% Resume in Latex
-% Author : Jake Gutierrez
-% Based off of: https://github.com/sb2nov/resume
-% License : MIT
-%------------------------
 
 \documentclass[letterpaper,11pt]{article}
 
@@ -32,14 +26,22 @@
 % sans-serif
 % \usepackage[sfdefault]{FiraSans}
 % \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
+\usepackage[sfdefault]{noto-sans}
+%\usepackage[default]{sourcesanspro}
 
 % serif
 % \usepackage{CormorantGaramond}
-\usepackage{charter}
+%\usepackage{charter}
 
-
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor= MidnightBlue,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+    
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 \fancyfoot{}
@@ -61,7 +63,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large\bfseries
+  \vspace{-4pt}\scshape\raggedright\Large\bfseries
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
@@ -70,19 +72,19 @@
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
-  \item\small{
+  \item\normalsize{
     {#1 \vspace{-2pt}}
   }
 }
 
 \newcommand{\achievementItem}[1]{
-  \item\small{
+  \item\normalsize{
     {#1 \vspace{-6pt}}
   }
 }
 
 \newcommand{\classesList}[4]{
-    \item\small{
+    \item\normalsize{
         {#1 #2 #3 #4 \vspace{-2pt}}
   }
 }
@@ -90,22 +92,22 @@
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textbf{\small #2} \\
-      \textit{\small#3} & \textit{\small #4} \\
+      \textbf{#1} & \textbf{\normalsize #2} \\
+      \textit{\normalsize#3} & \textit{\normalsize #4} \\
     \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
+      \textit{\normalsize#1} & \textit{\normalsize #2} \\
     \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & \textbf{\small #2} \\
+      \normalsize#1 & \textbf{\normalsize #2} \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -132,46 +134,32 @@
 % \end{tabular*}
 
 \begin{center}
-    {\Huge \scshape Jai Kumar Dewani} \\ \vspace{1pt}
+    {\Huge \scshape Pranav Goel} \\ \vspace{1pt}
     % 123 Street Name, Town, State 12345 \\ 
     \vspace{5pt}
-    \small \raisebox{-0.1\height}\faPhone\ 9340422023 ~ 
-    \raisebox{-0.2\height}\faEnvelope\ \href{mailto:jai.dewani.99@gmail.com}{ jai.dewani.99@gmail.com} ~ 
-    \raisebox{-0.2\height}\faLinkedin\ \href{https://www.linkedin.com/in/jai-dewani/}{ linkedin.com/in/jai-dewani}  ~
-    \raisebox{-0.2\height}\faGithub\ \href{https://github.com/jai-dewani}{ github.com/jai-dewani}
+    \normalsize \raisebox{-0.1\height}\faPhone\ 9599091897 ~ 
+    \raisebox{-0.2\height}\faEnvelope\ \href{mailto:pranavgoel2012@gmail.com}{ pranavgoel2012@gmail.com} ~ 
+    \raisebox{-0.2\height}\faTwitter\ \href{https://www.twitter.com/iipranavii/}{ twitter.com/iipranavii}  ~
+    \raisebox{-0.2\height}\faGithub\ \href{https://github.com/iipranavii}{ github.com/iipranavii}
     \vspace{-8pt}
 \end{center}
 
 
-%-----------EDUCATION-----------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {International Institute of Information Technology, Naya Raipur}{August '17 -- June '21}
-      {Bachelor of Technology in Computer Science}{Naya Raipur, Chattisghar India}
-  \resumeSubHeadingListEnd
 
 \section{Experience}
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Carl Zeiss}{July '21 -- Present}
-      {Software Engineer}{Bengaluru, Karnataka, India}
+      {\href{https://www.twitter.com/iipranavii/}{API Hacks 2.0}}{July '21 -- Oct '21}
+      {Organiser}{Remote}
       \vspace{-7pt}
       \resumeItemListStart
-        \resumeItem{Utilized design patterns while improving upon various existing Eye charts implimentations using WPF while resolving memory leaks}
-        \resumeItem{Worked on securing a video streaming service while minimizing re-render load on system}
+        \resumeItem{Created the Logo and Visual elements for the Hackathon}
+        \resumeItem{Engaged with the Community and Worked up on multiple ways to Innovate and Ideate.}
+        \resumeItem{Developed the Sponsor and Community Literature.}
+        \resumeItem{Hosted Workshops with Speakers from various Domains.}
       \resumeItemListEnd
 
-    \resumeSubheading
-      {Carl Zeiss}{January '21 -- June '21}
-      {FullStack Intern}{Bengaluru, Karnataka, India}
-      \vspace{-7pt}
-      \resumeItemListStart
-        \resumeItem{Implemented various new methods, which were exposed as APIs using .NET framework to be utilised by frontend}
-        \resumeItem{Created and deployed new gRPC servers for reducing coupling and introduce inter-processes communication channel between different services}
-        \resumeItem{Utilized NUnit unit-testing framework and Fluent Assertions library for writing new unit test cases to improve the development and reduce turn around time in testing}
-      \resumeItemListEnd
 
     % \resumeSubheading
     %   {Directi}{May ’19 -- June ’19}
@@ -189,34 +177,25 @@
     \vspace{-5pt}
     \resumeSubHeadingListStart
         \resumeProjectHeading
-            {\textbf{Meme Generator} $|$ \emph{JavaScript, React}  $|$ \href{https://jai-dewani.github.io/Meme-App/}{WebApp}}{September 2020}
+            {\href{https://github.com/imabp/getsponsors/}{\textbf{StoryBlok}} $|$ \emph{StoryBloks, NextJS, AnimeJS, Figma}}{October 2021}
             \resumeItemListStart
-                \resumeItem{Designed easy to use single page interface for creating memes}
-                \resumeItem{Utilized Canvas display logic for presenting editable images for users to add and drag text over to create memes}
-                \resumeItem{Built features for the ease of downloading memes and upload custom images for your custom memes}
+                \resumeItem{Ceated a Cohesive Platform for Organizers and Companies to Reach out and Avail Sponsorships.}
+                \resumeItem{Designed the Landing page and the the Workflow of the Service.}
+                \resumeItem{Developed a System to Reach out to multiple companies and keep track of available sponsorships in one place.}
             \resumeItemListEnd
         \resumeProjectHeading
-            {\textbf{DeepNeural Net Visualiser} $|$ \emph{Tensorflow, Flask, Streamlit} $|$ \href{https://visualize-neural-network.herokuapp.com/}{WebApp}}{June 2020} 
+            {\href{https://github.com/iipranavii/Feedback-Prime}{\textbf{Feedback Prime}} $|$ \emph{Symbl.ai, Kotlin, Sawo Labs, Figma}}{October 2021} 
             \resumeItemListStart
-                \resumeItem{Built a webapp for easier visualisation of hidden layers in a Neural Net in real-time}
-                \resumeItem{Utilised Streamlit to create a clean frontend design to update the model layer by layer}
-                \resumeItem{Deployed the project on free-tier Heroku service to be easily accessible by anyone}
+                \resumeItem{Created a AI based system to Intelligently understand a customer support call, and analyse the painpoints during the converstion.}
+                \resumeItem{Developed a straightforward Interface to easily upload the call recordings and get an Instant analysis of each Dialogue.}
+                \resumeItem{Designed a minimalistic UI for a clutter-free experience.}
             \resumeItemListEnd 
         \resumeProjectHeading
-            {\textbf{FunMark} $|$ \emph{Python} $|$ \href{https://github.com/jai-dewani/fun-mark}{GitHub}}{May 2020} 
+            {\href{https://github.com/iipranavii/Suite-Converter}{\textbf{Suite Converter}} $|$ \emph{Python, Speech Recognition, gTTS}}{January 2021} 
             \resumeItemListStart
-                \resumeItem{Developed a wrapper library for bench-marking different functions and allowing creation of graphical comparisons}
-                \resumeItem{Released on PyPi package manager to be easily accessible with pip with currently over 2K downloads}
-                \resumeItem{Wrote a blog on how to utilise the library efficiently \href{https://jai-dewani.github.io/blogs/fun-mark/}{jai-dewani.github.io/blogs/fun-mark/}}
-            \resumeItemListEnd 
-        \resumeProjectHeading
-            {\textbf{Lab Works} $|$ \emph{HTML, CSS, Js, Bootstrap, Django, SQLite} $|$ \href{https://github.com/jai-dewani/Lab-Works}{GitHub}}{April 2019} 
-            \resumeItemListStart
-                \resumeItem{Built a web platform to ease the lab assessments for technical courses involving standard coding problems }
-                \resumeItem{Devised a solution regarding issues with the manual process of lab assistants checking each submission manually}
-                \resumeItem{Used 3rd party API which provides a safe enviroment to compile and run code while supporting wide range programming languages}
-                % \resumeItem{Enabled  Professors to  create coding questions and add test cases.}
-                % \resumeItem{Used JDoodle’s API to compile student’s programs and check them against predefined test cases.}
+                \resumeItem{Created a CLi Program to Locally Inter-Convert Multiple Common File Types. }
+                \resumeItem{Devised a solution to convert Files without Internet Connection.}
+                \resumeItem{Implemented gTTS Python library to convert User's Voice into Printable text file.}
             \resumeItemListEnd 
     \resumeSubHeadingListEnd
 
@@ -226,32 +205,39 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     {\item{
-     \textbf{Languages}{: Python, JavaScript, C\#} \\
+     \textbf{Languages}{:C++, Python, HTML, CSS, Javascript } \\
      \vspace{1pt}
-     \textbf{Developer Tools}{: Heroku, Git, GitHub, Adobe Illustrator, CI/CD (GitHub Actions) } \\
+     \textbf{Developer Tools}{: Git, GitHub, Vercel } \\
      \vspace{1pt}
-     \textbf{Technologies}{: ASP.NET, WPF, gRPC, Node.js, React, Express, Bootstrap, Passport, Django} \\
+     \textbf{Design Tools}{: Figma, Adobe XD, Illustrator, Photoshop, Webflow} \\
     }}
  \end{itemize}
  \vspace{-16pt}
 
+   %-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Chandigarh University, Mohali}{September '20 -- August '24}
+      {Bachelor of Technology in Computer Science - Cloud Computing}{Mohali, Punjab, India}
+  \resumeSubHeadingListEnd
 
 
 %-----------INVOLVEMENT---------------
-\section{ACADEMIC ACHIEVEMENTS \& EXTRA-CURRICULAR}
+\section{ACHIEVEMENTS \& EXTRA-CURRICULAR}
 
 \begin{itemize}[leftmargin=0.2in]
-  \achievementItem{\textbf{Co-founded}  the  first  technical  club  at  IIIT-NR,  organized  various  events, talks and hackathons to  promote competitive programming and development while improve the coding environment of the Institute.}
-  \achievementItem{Ranked \textbf{1127\textsuperscript{th}} globally and \textbf{115\textsuperscript{th}} in India in Google HashCode, out of 10724 teams}
-  \achievementItem{Qualified ACM-ICPC 2020 in Kanpur(\textbf{rank 63}) and Gwalior regions}
-  \achievementItem{Qualified ACM-ICPC 2019 in Kharagpur(\textbf{rank 81}) and Amritapuri(\textbf{rank 37}) regions.}
-  \achievementItem{Successfully cleared the Foundation level in \textbf{CCDSAP Certification} CodeChef.}
-  \achievementItem{Recipient of {\bf Google India Challenge Scholarship '17 Phase-1} under Udacity Nanodegree program}
-  \achievementItem{Qualified CodeChef’s Snackdown with a rank of \textbf{2587 out of 27875}  teams}
-  \achievementItem{Ranked {\bf 3\textsuperscript{rd} in Codeutsava 2020} 2020, NIT Raipur’s Annual Hackathon out of 30 participating teams}
+  \achievementItem{\href{https://badgr.com/public/assertions/VVxNa822Quinhvm6DbWzoA}{\textbf{Postman Student Expert}} a program designed to promote API literacy amongst students and educators.}
+  \achievementItem{Won \textbf{1\textsuperscript{st}} Prize in \href{https://apiworld.co/hackathon}{API World Hackathon} for \textbf{Feedback Prime} in Symbl.ai Challenge - Go Beyond Speech Recognition with Conversation Intelligence APIs}
+  \achievementItem{Won StoryBlok Track at \href{https://hackthisfall.tech/}{Hack this Fall Hackathon} for SponsorBlok for the best Integration of Storyblok within our project. }
 \end{itemize}
         
     % \resumeSubHeadingListEnd
-
-
 \end{document}
+
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
