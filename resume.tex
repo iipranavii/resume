@@ -1,4 +1,11 @@
-\documentclass[letterpaper,11pt]{article}
+%------------------------
+% Resume Template
+% Author : Anubhav Singh
+% Github : https://github.com/xprilion
+% License : MIT
+%------------------------
+
+\documentclass[a4paper,20pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -7,40 +14,9 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
+\usepackage[pdftex]{hyperref}
 \usepackage{fancyhdr}
-\usepackage[english]{babel}
-\usepackage{tabularx}
-\usepackage{fontawesome5}
-\usepackage{multicol}
-\setlength{\multicolsep}{-3.0pt}
-\setlength{\columnsep}{-1pt}
-\input{glyphtounicode}
-\usepackage{ragged2e}
 
-\usepackage{xcolor}
-\hypersetup{colorlinks,urlcolor=blue}
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-\usepackage[sfdefault]{noto-sans}
-%\usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-%\usepackage{charter}
-
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,      
-    urlcolor= MidnightBlue,
-    pdftitle={Pranav's Resume},
-    pdfpagemode=FullScreen,
-    }
-    
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 \fancyfoot{}
@@ -48,13 +24,13 @@
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.6in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1.19in}
-\addtolength{\topmargin}{-.7in}
-\addtolength{\textheight}{1.4in}
+\addtolength{\oddsidemargin}{-0.530in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.45in}
+\addtolength{\textheight}{1in}
 
-\urlstyle{same}
+\urlstyle{rm}
 
 \raggedbottom
 \raggedright
@@ -62,176 +38,149 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\Large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
 %-------------------------
 % Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\normalsize{
-    {#1 \vspace{-2pt}}
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
   }
 }
 
-\newcommand{\achievementItem}[1]{
-  \item\normalsize{
-    {#1 \vspace{-6pt}}
-  }
-}
-
-\newcommand{\classesList}[4]{
-    \item\normalsize{
-        {#1 #2 #3 #4 \vspace{-2pt}}
+\newcommand{\resumeItemWithoutTitle}[1]{
+  \item\small{
+    {\vspace{-2pt}}
   }
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textbf{\normalsize #2} \\
-      \textit{\normalsize#3} & \textit{\normalsize #4} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
+  \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\normalsize#1} & \textit{\normalsize #2} \\
-    \end{tabular*}\vspace{-7pt}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
-      \normalsize#1 & \textbf{\normalsize #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
 
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
 
-\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand{\labelitemii}{$\circ$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\justify \begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%-----------------------------
+%%%%%%  CV STARTS HERE  %%%%%%
 
 \begin{document}
 
-%----------HEADING----------
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\LARGE Pranav Goel}} & Email: \href{mailto:}{pranavgoel2012@gmail.com}\\
+  \href{https://www.figma.com/@iipranavii}{Figma: figma.com/@iipranavii} & Mobile:~~+91-9599091897 \\
+  \href{https://github.com/iipranavii}{GitHub: ~~github.com/iipranavii} \\
+\end{tabular*}
 
-\begin{center}
-    {\Huge \scshape Pranav Goel} \\ \vspace{1pt}
-    % 123 Street Name, Town, State 12345 \\ 
-    \vspace{5pt}
-    \normalsize \raisebox{-0.1\height}\faPhone\ 9599091897 ~ 
-    \raisebox{-0.2\height}\faEnvelope\ \href{mailto:pranavgoel2012@gmail.com}{ pranavgoel2012@gmail.com} ~ 
-    \raisebox{-0.2\height}\faTwitter\ \href{https://www.twitter.com/iipranavii/}{ twitter.com/iipranavii}  ~
-    \raisebox{-0.2\height}\faBehance\ \href{https://www.behance.net/iipranavii}{behance.net/iipranavii} \\
-    \raisebox{-0.2\height}\faFigma\ \href{https://www.figma.com/@iipranavii}{figma.com/@iipranavii}
-    \vspace{-8pt}
-\end{center}
+\section{Summary}
+\textbf{Creating Beautiful Designs with Memorable Experiences.} Focused on designing products that are both accessible and interactive. My passion for human-computer interaction helps me observe what most people forget, thus helping me create designs that are unique yet familiar to use.
+I love working with Colors and Abstract Designs.
 
+\section{Skills Summary}
+	\resumeSubHeadingListStart
+	\resumeSubItem{Design}{~~~~~~~~~~~~Wire Framing, Low Fidelity , Prototypes, High Fidelity, Data Visualisation, Design Systems}
+	\resumeSubItem{Research}{~~~~~~~~~Storyboarding, User Research, Persona Development, User Journery, Usablilty Testing}
+	\resumeSubItem{Tools}{~~~~~~~~~~~~~~Figma, Zeplin, InVision, Adobe XD, Adobe Illustrator, Blender, GitHub, HTML/CSS}
+	\resumeSubItem{Soft Skills}{~~~~~~~Leadership, Empathy, Writing, Collaboration, Critical and Creative Thinking}
 
-
+\resumeSubHeadingListEnd
+\vspace{-5pt}
 \section{Experience}
   \resumeSubHeadingListStart
-
+    \resumeSubheading{Quansight}{Texas, USA (Remote)}
+    {UX Design Intern}{July 2022 - Oct 2022}
+    \resumeItemListStart
+        \resumeItem{Accessibility Design}
+          {Researched on Accessibility in Data Visualisation and WCAG Guideline.}
+          \resumeItem{Design System Research}
+          {Constructed a mood board for company-wide design system with accessibility focused design.}
+          \resumeItem{Data Viz Mock-Ups}{Implemented the Design System into currently used data visualisations, increasing visibility by 50\% within the visually impaired TA.}
+      \resumeItemListEnd
+\vspace{-5pt}
     \resumeSubheading
-      {\href{https://compete.peakmind.in/}{PeakMind}}{Jan '22 -- Present}
-      {UX Design Intern}{Remote}
-      \vspace{-7pt}
-      \resumeItemListStart
-        \resumeItem{Analysed the Competitive Space of Education/ Self-Help Apps
-}
-        \resumeItem{Created a User Journey for Pomodoro based app}
-        \resumeItem{Worked on the User Flow as well as Design for an Assessment targetted towards the Adolescent and
-Young Adults}
-        \resumeItem{Brainstormed on user accessibility as well as resultant feedback on each step}
-        \resumeItem{Designed the complete Assessment page as well as a Personalized Result page, including Wireframes,
-High-Fidelity Designs and Prototypes}
-      \resumeItemListEnd
+		{PeakMind}{Bengaluru, India (Remote)}
+		{Product Design Intern}{Jan 2022 -  July 2022}
+		\resumeItemListStart
+        \resumeItem{Brand Identity Implementation}
+          {Built a foundational design system for the company, Typography, Colours, Brand Identity.}
+        \resumeItem{User Interviews}
+          {Conducted User Research analysing current scope of improvement and target audience comparisons.}
+        \resumeItem{Web \& App design}{Designed Mobile App Mock-ups and Wireframes with extensively re-usable design components.}
+		\resumeItemListEnd
 
-  \resumeSubheading
-      {\href{https://www.twitter.com/iipranavii/}{API Hacks 2.0}}{July '21 -- Oct '21}
-      {Organiser}{Remote}
-      \vspace{-7pt}
-      \resumeItemListStart
-        \resumeItem{Designed the Hackathon Logo and Visual Components for Socials}
-        \resumeItem{Engaged within the Community to Uplift Innovation and Ideation.}
-        \resumeItem{Developed the Sponsor and Community Literature.}
-        \resumeItem{Hosted Workshops with Speakers from various Domains.}
-      \resumeItemListEnd
-    
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListEnd
 
-%-----------PROJECTS-----------
-\section{Projects}
-    \vspace{-5pt}
-    \resumeSubHeadingListStart
-        \resumeProjectHeading
-            {\href{https://github.com/imabp/getsponsors/}{\textbf{SponsorBlok}} $|$ \emph{StoryBloks, NextJS, AnimeJS, Figma}}{October 2021}
-            \resumeItemListStart
-                \resumeItem{\textbf{Ceated a Cohesive Platform for Organizers and Companies to Reach out and Avail Sponsorships.}}
-                \resumeItem{Designed the Landing page and the the Workflow of the Service.}
-                \resumeItem{Developed a System to Reach out to multiple companies and keep track of available sponsorships in one place.}
-            \resumeItemListEnd
-        \resumeProjectHeading
-            {\href{https://github.com/iipranavii/Feedback-Prime}{\textbf{Feedback Prime}} $|$ \emph{Symbl.ai, Kotlin, Sawo Labs, Figma}}{October 2021} 
-            \resumeItemListStart
-                \resumeItem{\textbf{Created a AI based system to Intelligently understand a customer support call, and analyse the pain points during the conversation.}}
-                \resumeItem{Developed a straightforward Interface to easily upload call recordings and get an Instant analysis of each Dialogue.}
-                \resumeItem{Designed a minimalistic UI for a clutter-free experience.}
-            \resumeItemListEnd 
-        \resumeProjectHeading
-            {\href{https://github.com/iipranavii/Suite-Converter}{\textbf{Suite Converter}} $|$ \emph{Python, Speech Recognition, gTTS}}{January 2021} 
-            \resumeItemListStart
-                \resumeItem{\textbf{Created a CLi Program to Locally Inter-Convert Multiple Common File Types. }}
-                \resumeItem{Devised a solution to convert Files without Internet Connection.}
-                \resumeItem{Implemented gTTS Python library to convert User's Voice into Printable text file.}
-            \resumeItemListEnd 
-    \resumeSubHeadingListEnd
-
-
-%
-%-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    {\item{
-     \textbf{Languages}{:C++, Python, HTML, CSS } \\
-     \vspace{1pt}
-     \textbf{Developer Tools}{: Git, GitHub, Vercel } \\
-     \vspace{1pt}
-     \textbf{Design Tools}{: Figma, Adobe XD, Illustrator, Photoshop, Webflow} \\
-    }}
- \end{itemize}
- \vspace{-16pt}
-
-   %-----------EDUCATION-----------
-\section{Education}
+%-----------EDUCATION-----------------
+\section{~~Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Chandigarh University, Mohali}{September '20 -- August '24}
-      {Bachelor of Technology in Computer Science - Cloud Computing}{Mohali, Punjab, India}
-  \resumeSubHeadingListEnd
+      {Chandigarh University}{Punjab, India}
+      {Bachelor of Technology - Computer Science;  GPA: 8.58}{Sept 2020 - June 2024*}
+      {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Courses:} Operating Systems, Data Structures, Analysis Of Algorithms, Cloud Computing, Microservices, Networking}}}
+      \resumeSubheading
+      {Google UX Design Certification}{Remote}
+      {User Experience and Interface Design}{}
+      {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Courses:} Moodboarding, Wireframing, Lo-Fi Design, User Research, High Fidelity Protoyping}}}
+    \resumeSubHeadingListEnd
+	    
+%-----------PROJECTS-----------------
+\vspace{-5pt}
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeSubItem{SponsorBlok}{(October 2021)}{StoryBloks, NextJS, AnimeJS, Figma}
+\begin{description}
+    \item {◦ Created a Cohesive Platform for Organizers and Companies to Reach out and Avail Sponsorships.}
+    \vspace{-5pt}
+    \item {◦ Designed the Landing page and the Workflow of the Service.}
+\end{description}
+\vspace{2pt}
+\resumeSubItem{FeedbackPrime}{(October 2021)}{Symbl.ai, Kotlin, Sawo Labs, Figma}
+\begin{description}
+    \item {◦ Built an Intelligent system to understand and analyse the pain points during a customer support call.}
+    \vspace{-5pt}
+    \item {◦ Designed an overnight UI to accept user’s input and showcase a line-by-line output.}
+\end{description}
+\resumeSubHeadingListEnd
+\vspace{-5pt}
+%-----------Awards-----------------
+\section{Honors and Achievements}
+\begin{description}[font=$\bullet$]
+\item {Selected as HackClub Leader - Community for High school tech enthusiasts}
+\vspace{-5pt}
+\item {Awarded the title of Postman Student Expert.}
+\vspace{-5pt}
+\item {Won 1st Prize in API World Hackathon for Feedback Prime in Symbl.ai Challenge}
+\vspace{-5pt}
+\item {Won StoryBlok Track at Hack this Fall Hackathon for SponsorBlok}
+\vspace{-5pt}
+\item {Won the first-ever Postman - API Fest}
+\end{description}
 
+\vspace{-5pt}
+\section{Volunteer Experience}
+  \resumeSubHeadingListStart
+	\resumeSubheading
+    {Organiser - API Hacks}{India}
+    {Organized events, hackathon and conducted technical workshops reaching over 500 developers.}{Jul 2021 - Oct 2021}
+\vspace{5pt}
+    % \vspace{10pt}\textbf{\large{Community Experience}}
+    \resumeSubheading
+    {Co-Organiser - Friends of Figma}{Jalandhar, India}
+    {Organized virtual workshop and worked on resources to help 100+ designers.}{November 2022 - Present}
 
-%-----------INVOLVEMENT---------------
-\section{ACHIEVEMENTS \& EXTRA-CURRICULAR}
+\resumeSubHeadingListEnd
 
-\begin{itemize}[leftmargin=0.2in]
-  \achievementItem{\href{https://badgr.com/public/assertions/VVxNa822Quinhvm6DbWzoA}{\textbf{Postman Student Expert}} a program designed to promote API literacy amongst students and educators.}
-  \achievementItem{Won \textbf{1\textsuperscript{st}} Prize in \href{https://apiworld.co/hackathon}{API World Hackathon} for \textbf{Feedback Prime} in Symbl.ai Challenge - Go Beyond Speech Recognition with Conversation Intelligence APIs}
-  \achievementItem{Won StoryBlok Track at \href{https://hackthisfall.tech/}{Hack this Fall Hackathon} for SponsorBlok for the best Integration of Storyblok within our project. }
-\end{itemize}
-        
-    % \resumeSubHeadingListEnd
 \end{document}
